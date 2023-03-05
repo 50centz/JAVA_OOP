@@ -20,7 +20,7 @@ public class Vehicle {
     }
 
     public void getProperties(){
-        System.out.printf("");
+        System.out.printf("%d, %d, %d, %d, %d", color, model, wheel, weight ,speed);
     }
     
 }
