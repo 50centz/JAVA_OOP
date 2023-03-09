@@ -6,7 +6,7 @@ public class AddTiger {
 
     public static void addTiger(){
 
-        System.out.print("Fill in the specifications\nGrowth: ");
+        System.out.print("Fill in the specifications\nGrowth: \n");
         Scanner in = new Scanner(System.in);
         Double growth = in.nextDouble();
         System.out.print("Weigt: ");
