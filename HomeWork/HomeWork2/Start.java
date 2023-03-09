@@ -2,6 +2,10 @@ package HomeWork.HomeWork2;
 
 import static HomeWork.HomeWork2.AddAnimal.addAnimal;
 import static HomeWork.HomeWork2.RemoveAnimals.removeAnimals;
+import static HomeWork.HomeWork2.ShowAnimal.showAnimal;
+import static HomeWork.HomeWork2.ShowAnimal.showAnimalAll;
+import static HomeWork.HomeWork2.ShowSound.showSound;
+import static HomeWork.HomeWork2.ShowSound.showSoundAll;
 
 import java.util.Scanner;
 
@@ -20,6 +24,18 @@ public class Start {
             }
             if (choice == 2){
                 removeAnimals();
+            }
+            if( choice == 3){
+                showAnimal();
+            }
+            if (choice == 4){
+                showAnimalAll();
+            }
+            if (choice == 5){
+                showSound();
+            }
+            if (choice == 6){
+                showSoundAll();
             }
             if (choice == 7){
                 start = false;
