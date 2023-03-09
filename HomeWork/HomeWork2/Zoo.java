@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Zoo {
 
     private Animal zoo;
-    private ArrayList<Animal> array = new ArrayList<>();
+    private static ArrayList<Animal> array = new ArrayList<>();
 
     public void setZoo(Animal animal) {
         array.add(animal);

@@ -2,6 +2,8 @@ package HomeWork.HomeWork2;
 
 public class Cat extends Pet implements Sound{
 
+    protected static int number;
+
     private String presenceOfWool;
     
     public Cat(Double growth, Double weight, String eyeColor, String nickname, String breed, String vaccinations,
