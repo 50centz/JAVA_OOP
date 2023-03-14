@@ -26,12 +26,12 @@ public class ProgramE {
 
         int number = 2;
         // GetJson.returnJson(number);
-        System.out.println(GetJson.returnJson(number));
+        System.out.println(GetjsonE.returnJson(number));
 
         String someSring = "Hello";
-        System.out.println(GetJson.returnJson(someSring));
+        System.out.println(GetjsonE.returnJson(someSring));
 
-        Cat cat = new Cat("Boris", 50);
-        System.out.println(GetJson.returnJson(cat));
+        CatE cat = new CatE("Boris", 50);
+        System.out.println(GetjsonE.returnJson(cat));
     }
 }

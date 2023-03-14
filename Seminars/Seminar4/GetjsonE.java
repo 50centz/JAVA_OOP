@@ -9,7 +9,7 @@ public class GetjsonE<E> {
             rez.append(el.toString());
         } else if (el instanceof String) {
             rez.append("\"" + el + "\"");
-        } else if (el instanceof Cat) {
+        } else if (el instanceof CatE) {
             rez.append(el.toString());
         }
 
