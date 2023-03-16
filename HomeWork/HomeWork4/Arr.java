@@ -130,30 +130,32 @@ public class Arr<E1> {
 
 
     public void selectSort() { 
-        int min = 0;
+        Integer min = 0;
         int temp = 0;
         int index = 0;
         int size = arr.size();
         for (int i = 0; i < size; i++) {
             if (arr.get(i) instanceof Integer){
-                min = (int)arr.get(i);
+                min = (Integer)arr.get(i);
             }
             for (int j = i; j < size; j++) {
                 if (arr.get(j) instanceof Integer ){
                     if(min > (Integer)arr.get(j)){
-                        temp = (int)arr.get(j);
+                        temp = (Integer)arr.get(j);
                         index = j;
                     }
                 }
             }
-            // int temp1 = (int)arr.get(i);
+            int temp1 = (int)arr.get(i);
             // if (temp1 > temp){
-            //     arr.remove(i);
             //     arr.add(i, temp);
-            //     arr.remove(index);
-            //     arr.add(index, te);
+            //     arr.remove(index + 1);
             // }
             arr.add(i, temp);
+            arr.remove(index + 1);
+            temp = 1;
+            index = 1;
+            
             System.out.println(temp);
             System.out.println(index);
         }
