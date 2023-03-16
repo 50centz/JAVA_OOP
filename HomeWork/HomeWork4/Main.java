@@ -13,9 +13,6 @@ public class Main {
 
         System.out.println(arr2.getSize());
 
-        System.out.println(arr2.getElement(2));
-
-        
         arr2.selectSort();
 
         arr2.printArr();

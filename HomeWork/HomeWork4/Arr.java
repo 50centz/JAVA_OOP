@@ -133,11 +133,12 @@ public class Arr<E1> {
         int min = 0;
         int temp = 0;
         int index = 0;
-        for (int i = 0; i < this.arr.size(); i++) {
+        int size = arr.size();
+        for (int i = 0; i < size; i++) {
             if (arr.get(i) instanceof Integer){
                 min = (int)arr.get(i);
             }
-            for (int j = i; j < this.arr.size()-1; j++) {
+            for (int j = i; j < size; j++) {
                 if (arr.get(j) instanceof Integer ){
                     if(min > (Integer)arr.get(j)){
                         temp = (int)arr.get(j);
@@ -145,15 +146,16 @@ public class Arr<E1> {
                     }
                 }
             }
-            int temp1 = (int)arr.get(i);
-            if (temp1 > temp){
-                arr.remove(i);
-                arr.add(i, temp);
-                arr.remove(index);
-                arr.add(index, te);
-            }
-
-            
+            // int temp1 = (int)arr.get(i);
+            // if (temp1 > temp){
+            //     arr.remove(i);
+            //     arr.add(i, temp);
+            //     arr.remove(index);
+            //     arr.add(index, te);
+            // }
+            arr.add(i, temp);
+            System.out.println(temp);
+            System.out.println(index);
         }
     }
 
