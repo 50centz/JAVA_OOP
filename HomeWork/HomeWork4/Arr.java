@@ -128,6 +128,31 @@ public class Arr<E1> {
         }
     }
 
+    public void insertSort(){        //11
+        int min = 0;
+        int index = 0;
+        int size = arr.size();
+        for (int i = 0; i < size - 1; i++) {
+            if (arr.get(i) instanceof Integer){
+                min = (int)arr.get(i);
+            }
+            for (int j = i; j < size; j++) {
+                if (arr.get(j) instanceof Integer ){
+                    if(min > (int)arr.get(j)){
+                        min = (int)arr.get(j);
+                        index = j;
+                    }
+                }
+            }
+            if (arr.get(i) instanceof Integer){
+                int temp1 = (int)arr.get(i);
+                arr.add(i, min);
+                arr.remove(i + 1);
+                arr.add(index, temp1);
+                arr.remove(index + 1);
+            }
+        }
+    }
 
     public void selectSort() {                                //12
         int min = 0;
@@ -152,11 +177,6 @@ public class Arr<E1> {
                 arr.remove(index + 1);
                 }
             }
-            // int temp1 = (int)arr.get(i);
-            // if (temp1 > min){
-            //     arr.add(i, min);
-            //     arr.remove(index + 1);
-            // }
         }
     }
 
@@ -180,7 +200,7 @@ public class Arr<E1> {
     }
 
     public int getSize(){                                       //16
-       return size;
+       return this.size = arr.size();
     }
 
 
