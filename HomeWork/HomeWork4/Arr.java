@@ -129,58 +129,57 @@ public class Arr<E1> {
     }
 
 
-    public void selectSort() { 
-        Integer min = 0;
-        int temp = 0;
+    public void selectSort() {                                //12
+        int min = 0;
         int index = 0;
         int size = arr.size();
         for (int i = 0; i < size; i++) {
             if (arr.get(i) instanceof Integer){
-                min = (Integer)arr.get(i);
+                min = (int)arr.get(i);
             }
             for (int j = i; j < size; j++) {
                 if (arr.get(j) instanceof Integer ){
-                    if(min > (Integer)arr.get(j)){
-                        temp = (Integer)arr.get(j);
+                    if(min > (int)arr.get(j)){
+                        min = (int)arr.get(j);
                         index = j;
                     }
                 }
             }
-            int temp1 = (int)arr.get(i);
-            // if (temp1 > temp){
-            //     arr.add(i, temp);
+            if (arr.get(i) instanceof Integer){
+                int temp1 = (int)arr.get(i);
+                if (temp1 > min){
+                arr.add(i, min);
+                arr.remove(index + 1);
+                }
+            }
+            // int temp1 = (int)arr.get(i);
+            // if (temp1 > min){
+            //     arr.add(i, min);
             //     arr.remove(index + 1);
             // }
-            arr.add(i, temp);
-            arr.remove(index + 1);
-            temp = 1;
-            index = 1;
-            
-            System.out.println(temp);
-            System.out.println(index);
         }
     }
 
 
 
-    public E1 getElement(int index){  //13
+    public E1 getElement(int index){                          //13
         E1 result = (E1)arr.get(index);
         return result;
     }
 
 
-    public void setElementIndex(E1 e1, int index){     //14
+    public void setElementIndex(E1 e1, int index){             //14
         arr.remove(index);
         arr.add(index, e1);
     }
 
-    public void printArr(){          //15
+    public void printArr(){                                      //15
         for (Object object : arr) {
             System.out.println(object);
         }
     }
 
-    public int getSize(){              //16
+    public int getSize(){                                       //16
        return size;
     }
 
