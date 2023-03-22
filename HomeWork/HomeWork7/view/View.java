@@ -1,8 +1,8 @@
-package HomeWork.HomeWork6.view;
+package HomeWork.HomeWork7.view;
 
 import java.util.Scanner;
 
-import HomeWork.HomeWork6.presenter.Presenter;
+import HomeWork.HomeWork7.presenter.Presenter;
 
 public class View {
     private Presenter presenter;

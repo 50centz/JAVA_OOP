@@ -1,9 +1,9 @@
-package HomeWork.HomeWork6.presenter;
+package HomeWork.HomeWork7.presenter;
 
 
 
-import HomeWork.HomeWork6.model.Model;
-import HomeWork.HomeWork6.view.View;
+import HomeWork.HomeWork7.model.Model;
+import HomeWork.HomeWork7.view.View;
 
 public class Presenter {
     

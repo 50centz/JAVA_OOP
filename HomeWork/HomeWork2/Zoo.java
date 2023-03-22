@@ -25,7 +25,7 @@ public class Zoo {
             System.out.println(((Chicken) animal).getInfoAnimal());
         }
         if (animal instanceof Dog) {
-            System.out.println(((Chicken) animal).getInfoAnimal());
+            System.out.println(((Dog) animal).getInfoAnimal());
         }
         if (animal instanceof Stork) {
             System.out.println(((Stork) animal).getInfoAnimal());
