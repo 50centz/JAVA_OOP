@@ -1,44 +1,44 @@
-package HomeWork.HomeWork6.view;
+package HomeWork.HomeWork6_version2.view;
 
+import java.io.IOException;
 import java.util.Scanner;
 
-import HomeWork.HomeWork6.presenter.Presenter;
+public class Dialogue implements Scan{
 
-public class View {
-    private Presenter presenter;
     private Scanner scanner;
     private Read read;
+    private View view;
 
-    public View(){
+    public Dialogue(){
         scanner = new Scanner(System.in);
         read = new Read();
     }
 
-    public void setPresenter(Presenter presenter){
-        this.presenter = presenter;
+    public void setView(View view){
+        this.view = view;
     }
 
-    public void start(){
-        scan();
-    }
-
-    private void scan(){
+    @Override
+    public StringBuilder scan() throws IOException {
         boolean start = true;
+        StringBuilder str = new StringBuilder();
         
         while(start){
             System.out.println("Select an item\n1 - Make an entry in a notebook\n2 - View all entries in notepad\n3 - Exit");
             int choice = scanner.nextInt();
             if (choice == 1){
-                StringBuilder str = read.read();
-                presenter.onStr(str);
+                str = read.read();
+                view.startPresenter(str);
             }
             if (choice == 2){
-                StringBuilder str2 = presenter.readd();
+                StringBuilder str2 = view.test4();
                 System.out.println(str2.toString());
             }
             if (choice == 3){
                 start = false;
             }
+            continue;
         }
+        return null;
     }
 }

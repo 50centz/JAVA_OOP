@@ -1,9 +1,9 @@
-package HomeWork.HomeWork7.presenter;
+package HomeWork.HomeWork6_version2.presenter;
 
+import java.io.IOException;
 
-
-import HomeWork.HomeWork7.model.Model;
-import HomeWork.HomeWork7.view.View;
+import HomeWork.HomeWork6_version2.model.Model;
+import HomeWork.HomeWork6_version2.view.View;
 
 public class Presenter {
     
@@ -22,7 +22,7 @@ public class Presenter {
         model.recording(sb);
     }
 
-    public StringBuilder readd(){
+    public StringBuilder readd() throws IOException{
         StringBuilder str = model.read();
         return str;
     }

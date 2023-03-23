@@ -1,11 +1,11 @@
-package HomeWork.HomeWork6.model;
+package HomeWork.HomeWork6_version1.model;
 
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
-import HomeWork.HomeWork6.presenter.Presenter;
+import HomeWork.HomeWork6_version1.presenter.Presenter;
 
 public class Model {
     private Presenter presenter;

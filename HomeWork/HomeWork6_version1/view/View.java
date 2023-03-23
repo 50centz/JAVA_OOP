@@ -1,47 +1,44 @@
-package HomeWork.HomeWork7.view;
+package HomeWork.HomeWork6_version1.view;
 
 import java.util.Scanner;
 
-public class Test2 implements Test{
+import HomeWork.HomeWork6_version1.presenter.Presenter;
 
+public class View {
+    private Presenter presenter;
     private Scanner scanner;
     private Read read;
-    private View view;
-    
 
-    public Test2(){
+    public View(){
         scanner = new Scanner(System.in);
         read = new Read();
     }
 
-    public void setView(View view){
-        this.view = view;
+    public void setPresenter(Presenter presenter){
+        this.presenter = presenter;
     }
 
-    @Override
-    public StringBuilder scan() {
+    public void start(){
+        scan();
+    }
+
+    private void scan(){
         boolean start = true;
-        StringBuilder str = new StringBuilder();
         
         while(start){
             System.out.println("Select an item\n1 - Make an entry in a notebook\n2 - View all entries in notepad\n3 - Exit");
             int choice = scanner.nextInt();
             if (choice == 1){
-                str = read.read();
+                StringBuilder str = read.read();
+                presenter.onStr(str);
             }
-            
             if (choice == 2){
-                StringBuilder str2 = view.test4();
+                StringBuilder str2 = presenter.readd();
                 System.out.println(str2.toString());
             }
             if (choice == 3){
                 start = false;
             }
-            
-            continue;
         }
-        return str;
-        
     }
-    
 }

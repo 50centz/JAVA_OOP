@@ -1,4 +1,4 @@
-package HomeWork.HomeWork6.view;
+package HomeWork.HomeWork6_version1.view;
 
 import java.util.Scanner;
 
