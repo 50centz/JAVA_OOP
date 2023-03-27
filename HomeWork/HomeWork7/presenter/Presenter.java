@@ -1,7 +1,6 @@
 package HomeWork.HomeWork7.presenter;
 
 import HomeWork.HomeWork7.model.Model;
-import HomeWork.HomeWork7.ui.DesktopUi;
 import HomeWork.HomeWork7.ui.View;
 
 public class Presenter {
