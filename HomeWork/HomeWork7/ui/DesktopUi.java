@@ -12,16 +12,23 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
+
+
 import HomeWork.HomeWork7.presenter.Presenter;
 
 public class DesktopUi extends JFrame implements ActionListener, View{
 
     private Presenter presenter;
 
+    static Desktop desktop;
+
     static JFrame frame;
     static JTextField result;
     static String a ="", b = "", operation = "";
 
+    private Font font = new Font("Calibri", Font.BOLD, 13);
+    
+    
 
     @Override
     public void setPresenter(Presenter presenter) {
@@ -35,6 +42,7 @@ public class DesktopUi extends JFrame implements ActionListener, View{
 
         frame = new JFrame("Calc");
         result = new JTextField(16);
+        result.setFont(font);
         result.setEditable(false);
 
         ArrayList<JButton> btns = new ArrayList<>();
@@ -68,13 +76,13 @@ public class DesktopUi extends JFrame implements ActionListener, View{
         frame.add(mainPanel);
         frame.setSize(200, 200);
         frame.setVisible(true);
+        
     }
 
 
     @Override
     public void actionPerformed(ActionEvent e) {
-         // System.out.println(e.getActionCommand());
-
+        // System.out.println(e.getActionCommand());
         String s = e.getActionCommand();
 
         if (s.charAt(0) >= '0' && s.charAt(0) <= '9' ){
@@ -82,19 +90,19 @@ public class DesktopUi extends JFrame implements ActionListener, View{
                 a = a + s;
             else 
                 b = b + s;
-                result.setText(a + operation + b); 
+                result.setText(a + operation + b);
             } else if (s.charAt(0) == 'c'){
                 a = operation = b = "";
                 result.setText(a + operation + b);
             } else if (s.charAt(0) == '='){
-                // Double rslt = switch (operation) {
-                //     case "+" -> Double.parseDouble(a) + Double.parseDouble(b);
-                //     case "-" -> Double.parseDouble(a) - Double.parseDouble(b);
-                //     case "/" -> Double.parseDouble(a) / Double.parseDouble(b);
-                //     default -> Double.parseDouble(a) * Double.parseDouble(b);    
-                // };
-                String out = a + operation + b;
-                Double rslt = Double.parseDouble(presenter.acceptСalculation(out));
+                Double rslt = switch (operation) {
+                    case "+" -> Double.parseDouble(a) + Double.parseDouble(b);
+                    case "-" -> Double.parseDouble(a) - Double.parseDouble(b);
+                    case "/" -> Double.parseDouble(a) / Double.parseDouble(b);
+                    default -> Double.parseDouble(a) * Double.parseDouble(b); 
+                       
+                };
+                
             a = String.valueOf(rslt);
             result.setText(a);
             operation = b = "";
@@ -104,5 +112,6 @@ public class DesktopUi extends JFrame implements ActionListener, View{
                 result.setText(a + operation + b);
             }
         }
-    }  
+    }
+
 }

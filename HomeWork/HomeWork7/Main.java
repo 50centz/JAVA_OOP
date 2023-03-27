@@ -10,12 +10,17 @@ import HomeWork.HomeWork7.ui.View;
 public class Main{
 
     public static void main(String[] args) {
-        View view = new ConsoleUi();
-        //View view = new DesktopUi();
+        //View view = new ConsoleUi();
+        View view = new DesktopUi();
         Model model = new Model();
+        
+        
+
         Presenter presenter = new Presenter(view, model);
 
         view.start();
+
+        
     }
 }
 
