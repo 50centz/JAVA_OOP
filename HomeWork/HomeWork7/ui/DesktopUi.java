@@ -18,7 +18,7 @@ import HomeWork.HomeWork7.presenter.Presenter;
 
 public class DesktopUi extends JFrame implements ActionListener, View{
 
-    private Presenter presenter;
+    static Presenter presenter;
 
     static Desktop desktop;
 
@@ -95,13 +95,15 @@ public class DesktopUi extends JFrame implements ActionListener, View{
                 a = operation = b = "";
                 result.setText(a + operation + b);
             } else if (s.charAt(0) == '='){
-                Double rslt = switch (operation) {
-                    case "+" -> Double.parseDouble(a) + Double.parseDouble(b);
-                    case "-" -> Double.parseDouble(a) - Double.parseDouble(b);
-                    case "/" -> Double.parseDouble(a) / Double.parseDouble(b);
-                    default -> Double.parseDouble(a) * Double.parseDouble(b); 
+                String out = a + operation + b;
+                // Double rslt = switch (operation) {
+                //     case "+" -> Double.parseDouble(a) + Double.parseDouble(b);
+                //     case "-" -> Double.parseDouble(a) - Double.parseDouble(b);
+                //     case "/" -> Double.parseDouble(a) / Double.parseDouble(b);
+                //     default -> Double.parseDouble(a) * Double.parseDouble(b); 
                        
-                };
+                // };
+                Double rslt = Double.parseDouble(presenter.acceptСalculation(out));
                 
             a = String.valueOf(rslt);
             result.setText(a);

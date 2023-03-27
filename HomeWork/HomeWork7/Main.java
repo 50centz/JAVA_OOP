@@ -14,13 +14,9 @@ public class Main{
         View view = new DesktopUi();
         Model model = new Model();
         
-        
-
         Presenter presenter = new Presenter(view, model);
 
         view.start();
-
-        
     }
 }
 
