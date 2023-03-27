@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 import HomeWork.HomeWork7.presenter.Presenter;
 
-public class ConsoleUi implements View{
+public class ConsoleUi implements View, Print{
 
     private Presenter presenter;
     private Scanner scanner;
